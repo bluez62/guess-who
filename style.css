@@ -1,0 +1,164 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: #f0f4f8;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.game-container {
+    max-width: 900px;
+    width: 100%;
+    text-align: center;
+}
+
+header h1 {
+    color: #1a56db;
+    margin-bottom: 5px;
+}
+
+header p {
+    color: #64748b;
+    margin-bottom: 25px;
+}
+
+/* Board Layout Grid */
+.board {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+/* Card Flipping Mechanism */
+.card {
+    background-color: transparent;
+    width: 100%;
+    height: 160px;
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+/* JavaScript triggers this class toggle */
+.card.eliminated .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-front {
+    background-color: #ffffff;
+    border: 2px solid #e2e8f0;
+    padding: 10px;
+}
+
+.card-front:hover {
+    border-color: #3b82f6;
+}
+
+.avatar {
+    font-size: 3rem;
+    margin-bottom: 8px;
+}
+
+.name {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: #1e293b;
+}
+
+/* Card Reverse Side (Flipped Down) */
+.card-back {
+    background-color: #ef4444;
+    color: white;
+    transform: rotateY(180deg);
+    border: 2px solid #b91c1c;
+}
+
+.card-back::after {
+    content: "?";
+    font-size: 3rem;
+    font-weight: bold;
+    opacity: 0.6;
+}
+
+/* Lower Controls UI */
+.controls {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+}
+
+.guess-panel {
+    margin-bottom: 15px;
+}
+
+select {
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 1px solid #cbd5e1;
+    margin: 0 10px;
+    font-size: 1rem;
+}
+
+button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+#submit-guess-btn {
+    background-color: #10b981;
+    color: white;
+}
+
+#submit-guess-btn:hover {
+    background-color: #059669;
+}
+
+#restart-btn {
+    background-color: #64748b;
+    color: white;
+}
+
+#restart-btn:hover {
+    background-color: #475569;
+}
+
+.message {
+    margin-top: 15px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
