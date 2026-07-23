@@ -16,11 +16,6 @@ const messageElement = document.getElementById("game-message");
 function initGame() {
     boardElement.innerHTML = "";
     messageElement.textContent = "";
-    
-    const randomIndex = Math.floor(Math.random() * characters.length);
-    secretCharacter = characters[randomIndex];
-    
-    console.log("Secret Character is: ", secretCharacter.name);
 
     characters.forEach(char => {
         const card = document.createElement("div");
@@ -46,7 +41,6 @@ function initGame() {
         const option = document.createElement("option");
         option.value = char.name;
         option.textContent = char.name;
-        guessSelect.appendChild(option);
     });
 }
 
