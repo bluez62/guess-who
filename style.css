@@ -163,14 +163,16 @@ button {
     font-weight: bold;
 }
 
-/* Styling for the new image elements */
 .card-img {
-    width: 80px;
-    height: 80px;
-    object-fit: cover;
-    border-radius: 4px;
-    margin-bottom: 8px;
+  width: 100%;
+  max-width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 4px;
+  flex-shrink: 0;
 }
+
 
 /* Styling for the new random selection button */
 #random-guess-btn {
