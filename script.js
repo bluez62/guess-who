@@ -1,13 +1,13 @@
 // 1. Updated Dataset: Replace image filenames with your own paths (e.g., "images/alex.png")
 const characters = [
-    { name: "Alex", gender: "male", hair: "brown", accessories: "none", facialHair: "yes", image: "https://placeholder.com" },
-    { name: "Anita", gender: "female", hair: "blonde", accessories: "none", facialHair: "no", image: "https://placeholder.com" },
-    { name: "Bernard", gender: "male", hair: "black", accessories: "hat", facialHair: "no", image: "https://placeholder.com" },
-    { name: "Claire", gender: "female", hair: "red", accessories: "glasses", facialHair: "no", image: "https://placeholder.com" },
-    { name: "David", gender: "male", hair: "blonde", accessories: "none", facialHair: "yes", image: "https://placeholder.com" },
-    { name: "Emma", gender: "female", hair: "brown", accessories: "glasses", facialHair: "no", image: "https://placeholder.com" },
-    { name: "George", gender: "male", hair: "grey", accessories: "hat", facialHair: "no", image: "https://placeholder.com" },
-    { name: "Maria", gender: "female", hair: "black", accessories: "none", facialHair: "no", image: "https://placeholder.com" }
+    { name: "Alex", gender: "male", hair: "brown", accessories: "none", facialHair: "yes", image: "images/alex.jpg" },
+    { name: "Anita", gender: "female", hair: "blonde", accessories: "none", facialHair: "no", image: "images/anita.jpg" },
+    { name: "Bernard", gender: "male", hair: "black", accessories: "hat", facialHair: "no", image: "images/bernard.jpg" },
+    { name: "Claire", gender: "female", hair: "red", accessories: "glasses", facialHair: "no", image: "images/claire.jpg" },
+    { name: "David", gender: "male", hair: "blonde", accessories: "none", facialHair: "yes", image: "images/david.jpg" },
+    { name: "Emma", gender: "female", hair: "brown", accessories: "glasses", facialHair: "no", image: "images/emma.jpg" },
+    { name: "George", gender: "male", hair: "grey", accessories: "hat", facialHair: "no", image: "images/george.jpg" },
+    { name: "Maria", gender: "female", hair: "black", accessories: "none", facialHair: "no", image: "images/maria.jpg" }
 ];
 
 let secretCharacter = null;
