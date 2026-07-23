@@ -26,7 +26,16 @@ const characters = [
     { name: "Egg Man", image: "images/Man_overworld_tree.gif" },
     { name: "Annoying Dog", image: "images/Annoying_Dog_overworld.gif" },
     { name: "Aqua", image: "images/Aqua_overworld.png" },
-    { name: "Seth", image: "images/Seth_overworld.png" }
+    { name: "Seth", image: "images/Seth_overworld.png" },
+    { name: "Yellow", image: "images/Yellow_overworld.png" },
+    { name: "Green", image: "images/Green_overworld.png" },
+    { name: "Blue", image: "images/Blue_overworld.png" },
+    { name: "Pink", image: "images/Pink_overworld.png" },
+    { name: "Orange", image: "images/Orange_overworld.png" },
+    { name: "Titan", image: "images/Titan_battle_idle.gif" },
+    { name: "Alphys", image: "images/Alphys_overworld.png" },
+    { name: "Titan", image: "images/Temmie_overworld.gif" },
+    { name: "Kikky", image: "images/Kikky_battle.png" }
 ];
 
 let secretCharacter = null;
@@ -71,5 +80,10 @@ function initGame() {
 
 
 restartBtn.addEventListener("click", initGame);
+
+function randomSel() {
+    let randomRow = characters[Math.floor(Math.random() * characters.length)];
+    alert(randomRow);
+}
 
 initGame();
