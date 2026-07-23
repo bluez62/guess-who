@@ -1,13 +1,13 @@
-// 1. Dataset of characters and their attributes
+// 1. Updated Dataset: Replace image filenames with your own paths (e.g., "images/alex.png")
 const characters = [
-    { name: "Alex", gender: "male", hair: "brown", accessories: "none", facialHair: "yes", avatar: "🧔" },
-    { name: "Anita", gender: "female", hair: "blonde", accessories: "none", facialHair: "no", avatar: "👩" },
-    { name: "Bernard", gender: "male", hair: "black", accessories: "hat", facialHair: "no", avatar: "🎩" },
-    { name: "Claire", gender: "female", hair: "red", accessories: "glasses", facialHair: "no", avatar: "👩‍🏫" },
-    { name: "David", gender: "male", hair: "blonde", accessories: "none", facialHair: "yes", avatar: "👱‍♂️" },
-    { name: "Emma", gender: "female", hair: "brown", accessories: "glasses", facialHair: "no", avatar: "👩‍⚕️" },
-    { name: "George", gender: "male", hair: "grey", accessories: "hat", facialHair: "no", avatar: "👴" },
-    { name: "Maria", gender: "female", hair: "black", accessories: "none", facialHair: "no", avatar: "👩‍💼" }
+    { name: "Alex", gender: "male", hair: "brown", accessories: "none", facialHair: "yes", image: "https://placeholder.com" },
+    { name: "Anita", gender: "female", hair: "blonde", accessories: "none", facialHair: "no", image: "https://placeholder.com" },
+    { name: "Bernard", gender: "male", hair: "black", accessories: "hat", facialHair: "no", image: "https://placeholder.com" },
+    { name: "Claire", gender: "female", hair: "red", accessories: "glasses", facialHair: "no", image: "https://placeholder.com" },
+    { name: "David", gender: "male", hair: "blonde", accessories: "none", facialHair: "yes", image: "https://placeholder.com" },
+    { name: "Emma", gender: "female", hair: "brown", accessories: "glasses", facialHair: "no", image: "https://placeholder.com" },
+    { name: "George", gender: "male", hair: "grey", accessories: "hat", facialHair: "no", image: "https://placeholder.com" },
+    { name: "Maria", gender: "female", hair: "black", accessories: "none", facialHair: "no", image: "https://placeholder.com" }
 ];
 
 let secretCharacter = null;
@@ -16,10 +16,11 @@ let secretCharacter = null;
 const boardElement = document.getElementById("game-board");
 const guessSelect = document.getElementById("character-guess");
 const submitGuessBtn = document.getElementById("submit-guess-btn");
+const randomGuessBtn = document.getElementById("random-guess-btn"); // New Button
 const restartBtn = document.getElementById("restart-btn");
 const messageElement = document.getElementById("game-message");
 
-// 2. Setup and populate the game matrix
+// 2. Setup game matrix
 function initGame() {
     boardElement.innerHTML = "";
     guessSelect.innerHTML = '<option value="" disabled selected>Choose a character...</option>';
@@ -29,12 +30,10 @@ function initGame() {
     const randomIndex = Math.floor(Math.random() * characters.length);
     secretCharacter = characters[randomIndex];
     
-    // Console log the answer for debugging/testing
     console.log("Secret Character is: ", secretCharacter.name);
 
-    // Build the board cards and dropdown values dynamically
+    // Build the board cards dynamically using <img> tags instead of emojis
     characters.forEach(char => {
-        // Create Card HTML Elements
         const card = document.createElement("div");
         card.classList.add("card");
         card.dataset.name = char.name;
@@ -42,21 +41,19 @@ function initGame() {
         card.innerHTML = `
             <div class="card-inner">
                 <div class="card-front">
-                    <span class="avatar">${char.avatar}</span>
+                    <img src="${char.image}" alt="${char.name}" class="card-img">
                     <span class="name">${char.name}</span>
                 </div>
                 <div class="card-back"></div>
             </div>
         `;
 
-        // Card flip event listener
         card.addEventListener("click", () => {
             card.classList.toggle("eliminated");
         });
 
         boardElement.appendChild(card);
 
-        // Populate guessing selection choices
         const option = document.createElement("option");
         option.value = char.name;
         option.textContent = char.name;
@@ -64,7 +61,21 @@ function initGame() {
     });
 }
 
-// 3. Game win/loss logic engine
+// 3. Logic to pick a random character from the remaining dropdown choices
+function chooseRandomCharacter() {
+    // Generate a random index based on available character choices (excluding placeholder)
+    const availableOptions = Array.from(guessSelect.options).filter(opt => opt.value !== "");
+    
+    if (availableOptions.length === 0) return;
+
+    const randomIndex = Math.floor(Math.random() * availableOptions.length);
+    guessSelect.value = availableOptions[randomIndex].value;
+    
+    messageElement.style.color = "#1e293b";
+    messageElement.textContent = `Selected ${guessSelect.value}! Click "Submit Guess" to check if you are right.`;
+}
+
+// 4. Game win/loss logic engine
 function checkFinalGuess() {
     const selectedGuess = guessSelect.value;
     
@@ -83,8 +94,9 @@ function checkFinalGuess() {
     }
 }
 
-// 4. Global Action Event Bindings
+// 5. Global Action Event Bindings
 submitGuessBtn.addEventListener("click", checkFinalGuess);
+randomGuessBtn.addEventListener("click", chooseRandomCharacter); // New Event Binding
 restartBtn.addEventListener("click", initGame);
 
 // Fire engine initial run execution
