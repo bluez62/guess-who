@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess Who? Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <header>
+            <h1>Guess Who?</h1>
+            <p>Click cards to eliminate characters based on your questions!</p>
+        </header>
+
+        <!-- Main Board Grid -->
+        <main id="game-board" class="board"></main>
+
+        <!-- Control Action Panel -->
+        <section class="controls">
+            <div class="guess-panel">
+                <label for="character-guess">Ready to guess the secret character?</label>
+                <select id="character-guess">
+                    <option value="" disabled selected>Choose a character...</option>
+                </select>
+                <button id="submit-guess-btn">Submit Guess</button>
+            </div>
+            
+            <button id="restart-btn">Restart Game</button>
+            <p id="game-message" class="message"></p>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
