@@ -15,7 +15,6 @@ const messageElement = document.getElementById("game-message");
 // 2. Setup game matrix
 function initGame() {
     boardElement.innerHTML = "";
-    guessSelect.innerHTML = '<option value="" disabled selected>Choose a character...</option>';
     messageElement.textContent = "";
     
     const randomIndex = Math.floor(Math.random() * characters.length);
