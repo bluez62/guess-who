@@ -21,10 +21,10 @@ const characters = [
     { name: "Sans", image: "images/Sans_overworld.png" },
     { name: "Carol", image: "images/Carol_overworld.png" },
     { name: "The Roaring Knight", image: "images/Knight_overworld_front.png" },
-    { name: "FRIEND", image: "images/Friend_overworld_vision.gif" },
+    { name: "FRIEND", image: "images/FRIEND_overworld_vision.gif" },
     { name: "Flowery", image: "images/Flowery_overworld.png" },
     { name: "Egg Man", image: "images/Man_overworld_tree.gif" },
-    { name: "Annoying Dog", image: "images/Annoying_Dog_overworld.png" },
+    { name: "Annoying Dog", image: "images/Annoying_Dog_overworld.gif" },
     { name: "Aqua", image: "images/Aqua_overworld.png" },
     { name: "Seth", image: "images/Seth_overworld.png" }
 ];
