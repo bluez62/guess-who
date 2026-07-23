@@ -1,6 +1,6 @@
 const characters = [
-    { name: "Kris", image: "images/Kris_overworld_static.jpg" },
-    { name: "Susie", image: "images/Susie_overworld_eyes.jpg" },
+    { name: "Kris", image: "images/Kris_overworld_static.png" },
+    { name: "Susie", image: "images/Susie_overworld_eyes.png" },
 ];
 
 let secretCharacter = null;
@@ -12,7 +12,6 @@ const randomGuessBtn = document.getElementById("random-guess-btn");
 const restartBtn = document.getElementById("restart-btn");
 const messageElement = document.getElementById("game-message");
 
-// 2. Setup game matrix
 function initGame() {
     boardElement.innerHTML = "";
     messageElement.textContent = "";
