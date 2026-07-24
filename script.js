@@ -1,5 +1,5 @@
 const characters = [
-    { name: "Kris", image: "images/Kris_overworld_static.png", description: "The main character of DELTARUNE. First introducted in Chapter 1."},
+    { name: "Kris", image: "images/Kris_overworld_static.png", description: `"Kris Dreemurr" (Lightner)\nThe main character of DELTARUNE.\n\nFirst Appearence: Chapter 1.`},
     { name: "Susie", image: "images/Susie_overworld_eyes.png" },
     { name: "Ralsei", image: "images/Ralsei_overworld_hatless.png" },
     { name: "Noelle", image: "images/Noelle_overworld.png" },
