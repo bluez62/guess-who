@@ -82,8 +82,9 @@ function initGame() {
 restartBtn.addEventListener("click", initGame);
 
 function randomSel() {
-    let randomRow = characters[Math.floor(Math.random() * characters.length)];
-    alert(randomRow);
+    const randomIndex = Math.floor(Math.random() * characters.length);
+
+    alert(characters[randomIndex].name);
 }
 
 initGame();
