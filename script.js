@@ -67,30 +67,64 @@ function initGame() {
     messageElement.textContent = "";
 
     characters.forEach(char => {
-        const card = document.createElement("div");
-        card.classList.add("card");
-        card.dataset.name = char.name;
+  const card = document.createElement("div");
+  card.classList.add("card");
+  card.dataset.name = char.name;
+  card.innerHTML = `
+    <div class="card-inner">
+      <div class="card-front">
+        <img src="${char.image}" alt="${char.name}" class="card-img">
+        <span class="name">${char.name}</span>
+      </div>
+      <div class="card-back"></div>
+    </div>
+  `;
 
-        card.innerHTML = `
-            <div class="card-inner">
-                <div class="card-front">
-                    <img src="${char.image}" alt="${char.name}" class="card-img">
-                    <span class="name">${char.name}</span>
-                </div>
-                <div class="card-back"></div>
-            </div>
-        `;
+  // Left-click to eliminate
+  card.addEventListener("click", () => {
+    card.classList.toggle("eliminated");
+  });
 
-        card.addEventListener("click", () => {
-            card.classList.toggle("eliminated");
-        });
+  // Right-click to show info
+  card.addEventListener("contextmenu", (event) => {
+    event.preventDefault(); // Stops the standard browser right-click menu
+    showCharacterInfo(char);
+  });
 
-        boardElement.appendChild(card);
+  boardElement.appendChild(card);
+});
 
-        const option = document.createElement("option");
-        option.value = char.name;
-        option.textContent = char.name;
-    });
+}
+
+function showCharacterInfo(char) {
+  // Check if a modal already exists, remove it if it does
+  const existingModal = document.getElementById("info-modal");
+  if (existingModal) existingModal.remove();
+
+  // Create modal layout
+  const modal = document.createElement("div");
+  modal.id = "info-modal";
+  modal.className = "modal-overlay";
+  modal.innerHTML = `
+    <div class="modal-content">
+      <h2>${char.name}</h2>
+      <img src="${char.image}" alt="${char.name}">
+      <p>${char.description || "No description available."}</p> 
+      <button id="close-modal-btn">Close</button>
+    </div>
+  `;
+
+  document.body.appendChild(modal);
+
+  // Close button logic
+  document.getElementById("close-modal-btn").addEventListener("click", () => {
+    modal.remove();
+  });
+
+  // Optional: Close modal if clicking outside the content box
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) modal.remove();
+  });
 }
 
 
