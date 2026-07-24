@@ -38,7 +38,19 @@ const characters = [
     { name: "Temmie", image: "images/Temmie_overworld.png" },
     { name: "Shadowguy", image: "images/Shadowguy_battle_idle.gif" },
     { name: "Water Cooler", image: "images/Watercooler_battle_idle.png" },
-    { name: "Nubert", image: "images/Nubert_overworld.png" }
+    { name: "Nubert", image: "images/Nubert_overworld.png" },
+    { name: "Catty", image: "images/Catty_overworld.png" },
+    { name: "Dad Cat", image: "images/Dad_Cat_overworld.png" },
+    { name: "Bratty", image: "images/Bratty_overworld.png" },
+    { name: "Froggit", image: "images/Froggit_overworld.png" },
+    { name: "Politics Bear", image: "images/Politics_Bear_overworld.png" },
+    { name: "QC", image: "images/QC_overworld.png" },
+    { name: "Catti", image: "images/Catti_overworld_waitress.png" },
+    { name: "Monster Kid", image: "images/Monster_Kid_overworld.png" },
+    { name: "Jockington", image: "images/Jockington_overworld.png" },
+    { name: "Snowy", image: "images/Snowy_overworld.png" },
+    { name: "Onion", image: "images/Onion_overworld.gif" },
+    { name: "Normal NPC", image: "images/Normal_NPC_overworld.png" }
 ];
 
 let secretCharacter = null;
