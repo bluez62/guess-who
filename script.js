@@ -90,23 +90,19 @@ card.addEventListener("contextmenu", (event) => {
   showCharacterInfo(char);
 });
 
-// --- Mobile Long-Press Support ---
 let pressTimer;
 
 card.addEventListener("touchstart", (event) => {
-  // Start a timer when the user touches the card
   pressTimer = setTimeout(() => {
     showCharacterInfo(char);
-  }, 600); // 600ms hold time
+  }, 600);
 });
 
 card.addEventListener("touchend", () => {
-  // Clear timer if they lift their finger early
   clearTimeout(pressTimer);
 });
 
 card.addEventListener("touchmove", () => {
-  // Clear timer if they scroll or move their finger
   clearTimeout(pressTimer);
 });
 
@@ -117,11 +113,10 @@ boardElement.appendChild(card);
 }
 
 function showCharacterInfo(char) {
-  // Check if a modal already exists, remove it if it does
+
   const existingModal = document.getElementById("info-modal");
   if (existingModal) existingModal.remove();
 
-  // Create modal layout
   const modal = document.createElement("div");
   modal.id = "info-modal";
   modal.className = "modal-overlay";
@@ -136,12 +131,10 @@ function showCharacterInfo(char) {
 
   document.body.appendChild(modal);
 
-  // Close button logic
   document.getElementById("close-modal-btn").addEventListener("click", () => {
     modal.remove();
   });
 
-  // Optional: Close modal if clicking outside the content box
   modal.addEventListener("click", (e) => {
     if (e.target === modal) modal.remove();
   });

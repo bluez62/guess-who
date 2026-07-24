@@ -29,7 +29,6 @@ header p {
     margin-bottom: 25px;
 }
 
-/* Board Layout Grid */
 .board {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
@@ -37,7 +36,6 @@ header p {
     margin-bottom: 30px;
 }
 
-/* Card Flipping Mechanism */
 .card {
     background-color: transparent;
     width: 100%;
@@ -55,7 +53,6 @@ header p {
     transform-style: preserve-3d;
 }
 
-/* JavaScript triggers this class toggle */
 .card.eliminated .card-inner {
     transform: rotateY(180deg);
 }
@@ -95,7 +92,6 @@ header p {
     color: #1e293b;
 }
 
-/* Card Reverse Side (Flipped Down) */
 .card-back {
     background-color: #ef4444;
     color: white;
@@ -110,7 +106,6 @@ header p {
     opacity: 0.6;
 }
 
-/* Lower Controls UI */
 .controls {
     background: white;
     padding: 20px;
@@ -174,7 +169,6 @@ button {
 }
 
 
-/* Styling for the new random selection button */
 #random-guess-btn {
     background-color: #3b82f6;
     color: white;
@@ -185,7 +179,6 @@ button {
     background-color: #2563eb;
 }
 
-/* Dark background overlay */
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -199,7 +192,6 @@ button {
   z-index: 1000;
 }
 
-/* Centered info card box */
 .modal-content {
   background: #222;
   color: white;
