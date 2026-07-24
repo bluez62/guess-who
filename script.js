@@ -35,7 +35,10 @@ const characters = [
     { name: "Titan", image: "images/Titan_battle_idle.gif" },
     { name: "Alphys", image: "images/Alphys_overworld.png" },
     { name: "Kikky", image: "images/Kikky_battle.png" },
-    { name: "Temmie", image: "images/Temmie_overworld.png" }
+    { name: "Temmie", image: "images/Temmie_overworld.png" },
+    { name: "Shadowguy", image: "images/Shadowguy_battle_idle.gif" },
+    { name: "Water Cooler", image: "images/Watercooler_battle_idle.png" },
+    { name: "Nubert", image: "images/Nubert_overworld.png" }
 ];
 
 let secretCharacter = null;
