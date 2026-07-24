@@ -53,7 +53,9 @@ const characters = [
     { name: "Normal NPC", image: "images/Normal_NPC_overworld.png", description: `"Normal NPC" (Lightner)\nMysterious character who may be related to Gaster.\n\nFirst Appearence: Chapter 1.` },
     { name: "Shadow Mantle Holder", image: "images/Shadow_Mantle_holder_battle_idle.gif", description: `"Shadow Mantle Holder/eRAM/Nightmare" (Unknown)\nMysterious creature in the Mantle Minigames from Chapter 3. Found inside the virtual bunker.\n\nFirst Appearence: Chapter 3.` },
     { name: "Napstablook", image: "images/Napstablook_overworld.png", description: `"Napstablook" (Lightner)\nNapstablook works at the police station, doesn't really care what you do, and is also a character from undertale.\n\nFirst Appearence: Chapter 2.` },
-    { name: "Alvin", image: "images/Alvin_overworld.png", description: `"Alvin Boom" (Lightner)\nAlvin is Gerson's son. He also works at the church.\n\nFirst Appearence: Chapter 1.` }
+    { name: "Alvin", image: "images/Alvin_overworld.png", description: `"Alvin Boom" (Lightner)\nAlvin is Gerson's son. He also works at the church.\n\nFirst Appearence: Chapter 1.` },
+    { name: "Rudinn", image: "images/Rudinn_overworld.gif", description: `"Rudinn" (Darkner)\nRudinn is the first enemy you ever encounter in Deltarune. Found in the Field of Hopes and Dreams.\n\nFirst Appearence: Chapter 1.` },
+    { name: "Hathy", image: "images/Hathy_battle.gif", description: `"Hathy" (Darkner)\nHathy is the second enemy you ever encounter in Deltarune. Found in the Field of Hopes and Dreams.\n\nFirst Appearence: Chapter 1.` }
 ];
 
 let secretCharacter = null;
