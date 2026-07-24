@@ -49,8 +49,8 @@ const characters = [
     { name: "Monster Kid", image: "images/Monster_Kid_overworld.png", description: `"Monster Kid" (Lightner)\nKid who is in the same class as Kris, Susie, and Noelle.\n\nFirst Appearence: Chapter 1.` },
     { name: "Jockington", image: "images/Jockington_overworld.png", description: `"Jockington" (Lightner)\nAttends the same class as Kris, Susie, and Noelle. Is best friend's with Catti.\n\nFirst Appearence: Chapter 1.` },
     { name: "Snowy", image: "images/Snowy_overworld.png", description: `"Snowy" (Lightner)\nRandom Guy who attends the same class as Kris, Susie, and Noelle.\n\nFirst Appearence: Chapter 1.` },
-    { name: "Onion", image: "images/Onion_overworld.gif", description: `"QC" (Lightner)\nLives in the lake. Went missing after going to investigate a mysterious song coming from under the lake.\n\nFirst Appearence: Chapter 1.` },
-    { name: "Normal NPC", image: "images/Normal_NPC_overworld.png", description: `"QC" (Lightner)\nMysterious character who may be related to Gaster.\n\nFirst Appearence: Chapter 1.` }
+    { name: "Onion", image: "images/Onion_overworld.gif", description: `"Onion" (Lightner)\nLives in the lake. Went missing after going to investigate a mysterious song coming from under the lake.\n\nFirst Appearence: Chapter 1.` },
+    { name: "Normal NPC", image: "images/Normal_NPC_overworld.png", description: `"Normal NPC" (Lightner)\nMysterious character who may be related to Gaster.\n\nFirst Appearence: Chapter 1.` }
 ];
 
 let secretCharacter = null;
