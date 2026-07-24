@@ -85,13 +85,33 @@ function initGame() {
     card.classList.toggle("eliminated");
   });
 
-  // Right-click to show info
-  card.addEventListener("contextmenu", (event) => {
-    event.preventDefault(); // Stops the standard browser right-click menu
-    showCharacterInfo(char);
-  });
+card.addEventListener("contextmenu", (event) => {
+  event.preventDefault();
+  showCharacterInfo(char);
+});
 
-  boardElement.appendChild(card);
+// --- Mobile Long-Press Support ---
+let pressTimer;
+
+card.addEventListener("touchstart", (event) => {
+  // Start a timer when the user touches the card
+  pressTimer = setTimeout(() => {
+    showCharacterInfo(char);
+  }, 600); // 600ms hold time
+});
+
+card.addEventListener("touchend", () => {
+  // Clear timer if they lift their finger early
+  clearTimeout(pressTimer);
+});
+
+card.addEventListener("touchmove", () => {
+  // Clear timer if they scroll or move their finger
+  clearTimeout(pressTimer);
+});
+
+boardElement.appendChild(card);
+
 });
 
 }
