@@ -52,7 +52,7 @@ const characters = [
     { name: "Onion", image: "images/Onion_overworld.gif", description: `"Onion" (Lightner)\nLives in the lake. Went missing after going to investigate a mysterious song coming from under the lake.\n\nFirst Appearence: Chapter 1.` },
     { name: "Normal NPC", image: "images/Normal_NPC_overworld.png", description: `"Normal NPC" (Lightner)\nMysterious character who may be related to Gaster.\n\nFirst Appearence: Chapter 1.` },
     { name: "Shadow Mantle Holder", image: "images/Shadow_Mantle_holder_battle_idle.gif", description: `"Shadow Mantle Holder/eRAM/Nightmare" (Unknown)\nMysterious creature in the Mantle Minigames from Chapter 3. Found inside the virtual bunker.\n\nFirst Appearence: Chapter 3.` },
-    { name: "Normal NPC", image: "images/Napstablook_overworld.png", description: `"Napstablook" (Lightner)\nNapstablook works at the police station, doesn't really care what you do, and is also a character from undertale.\n\nFirst Appearence: Chapter 2.` }
+    { name: "Napstablook", image: "images/Napstablook_overworld.png", description: `"Napstablook" (Lightner)\nNapstablook works at the police station, doesn't really care what you do, and is also a character from undertale.\n\nFirst Appearence: Chapter 2.` }
 ];
 
 let secretCharacter = null;
